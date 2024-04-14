@@ -214,13 +214,8 @@ class game{
     }
 
     generateBoard(){
-        boardDiv.style.gridTemplateRows = `repeat(${this.size}, 50px)`;
-        boardDiv.style.gridTemplateColumns = `repeat(${this.size}, 50px)`;
-
-        if(current[0] <= 9)
-            boardDiv.style.gap = '1px';
-        else
-            boardDiv.style.gap = '0px';
+        boardDiv.style.gridTemplateRows = `repeat(${this.size}, 25px)`;
+        boardDiv.style.gridTemplateColumns = `repeat(${this.size}, 25px)`;
 
         for(let i = 0; i < this.size; i++){
             this.board[i] = new Array(this.size);
@@ -272,8 +267,6 @@ closeBtn.addEventListener('click', function(){
     inputNumber.value = '';
 })
 
-
-
 applyCustom.addEventListener('click', function(){
     try{
         inputValue0 = inputSize.value.replace(/ /g, '');
@@ -287,7 +280,7 @@ applyCustom.addEventListener('click', function(){
             errorWarning.textContent = "Board size exceeds the maximum size of 25!";
             return;
         }
-        if(inputValue0 < 3){
+        if(inputValue0 < 5){
             errorWarning.textContent = "Board size is too small!";
             return;
         }
