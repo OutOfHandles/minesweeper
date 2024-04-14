@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="content">
+        <div class="nav">Minesweeper</div>
+        <div class="files">
+            <button class="opt">
+                Options
+            </button>
+            <div class="hidden">
+                <button class="easy">Easy</button>
+                <button class="medium">Medium</button>
+                <button class="hard">Hard</button>
+                <button class="custom">Custom</button>
+            </div>
+        </div>
+        <div class="customSize">
+            <div class="nav">
+                <span>Minesweeper</span>
+                <button class="close" id="close">X</button>
+            </div>
+            <div class="container">
+                <span id="error"></span>
+                <label>Board Size:
+                    <input type="text" required id="inputSize">
+                </label>
+                <label>Number of Mines: 
+                    <input type="text" require id="inputNumber">
+                </label>
+                <button id="apply">Apply</button>
+            </div>
+        </div>
+        <div class="gameOver">
+            <div class="nav">Minesweeper</div>
+            <div class="msg">
+                <span class="txt"></span>
+                <button id="retry"></button>
+            </div>
+        </div>
+        <div class="game">
+            <div id="board"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
